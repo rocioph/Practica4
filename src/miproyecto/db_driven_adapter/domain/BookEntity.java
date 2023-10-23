@@ -10,6 +10,11 @@ import miproyecto.core.domain.Book;
 
 @Entity
 public class BookEntity { 
+	public BookEntity(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
@@ -39,11 +44,7 @@ public void setName(String name) {
 }
 
 
-public BookEntity(Long id, String name) {
-	super();
-	this.id = id;
-	this.name = name;
-}
+
 
 
 public Book toBook(){
